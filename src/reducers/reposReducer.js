@@ -1,7 +1,7 @@
 import { SET_REPOS } from "../actions/repos";
 
 const initState = {
-  repos: {},
+  repos: [],
 };
 
 export default function reposReducer(state = initState, action) {
