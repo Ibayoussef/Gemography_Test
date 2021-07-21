@@ -1,5 +1,9 @@
 .infinite-scroll-component {
     padding: 50px;
+
+    &:hover .repo-row:not(:hover) {
+        transform: translateX(-10%);
+    }
 }
 
 .navbar {
@@ -20,6 +24,9 @@
         transform: translateX(10%);
         cursor: pointer;
     }
+
+
+
 }
 
 .accent {
