@@ -1,0 +1,23 @@
+.infinite-scroll-component {
+    padding: 50px;
+}
+
+.navbar {
+    background: $color-secondary;
+}
+
+.repo-row {
+    background: $color-secondary;
+    padding: 50px;
+    border: 3px solid $color-primary;
+    align-items: center !important;
+    color: $color-primary;
+    border-radius: 60px;
+    transition: all .4s;
+
+
+    &:hover {
+        transform: translateX(10%);
+        cursor: pointer;
+    }
+}

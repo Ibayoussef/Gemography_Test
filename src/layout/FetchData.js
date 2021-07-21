@@ -1,15 +1,10 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchRepos } from "../actions/repos";
-import { fetchStars } from "../actions/mostStared";
-function FetchData({ fetchRepos, fetchStars }) {
+function FetchData({ fetchRepos }) {
   useEffect(() => {
-    fetchRepos();
+    fetchRepos(1);
   }, [fetchRepos]);
-
-  useEffect(() => {
-    fetchStars();
-  }, [fetchStars]);
 
   return <div />;
 }
@@ -17,13 +12,11 @@ function FetchData({ fetchRepos, fetchStars }) {
 const mapStateToProps = (state) => {
   return {
     repos: state.repos,
-    stars: state.stars,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchRepos: () => dispatch(fetchRepos()),
-    fetchStars: () => dispatch(fetchStars()),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(FetchData);

@@ -1,1 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import './base/typography';
+@import './base/variables';
+@import './base/base';
+
+@import "./components/repo-info.scss";

@@ -7,12 +7,19 @@ const setRepos = (repos) => ({
   type: SET_REPOS,
   payload: repos,
 });
+
 // get repos from the server
-export function fetchRepos() {
+export function fetchRepos(number, repos) {
   return (dispatch) => {
     return axios
-      .get(API_ENDPOINT)
-      .then((res) => dispatch(setRepos(res.data.items)))
+      .get(API_ENDPOINT + `&page=${number}`)
+      .then((res) =>
+        dispatch(
+          repos
+            ? setRepos([...repos, ...res.data.items])
+            : setRepos(res.data.items)
+        )
+      )
       .catch((err) => console.error(err));
   };
 }
