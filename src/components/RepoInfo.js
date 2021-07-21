@@ -11,8 +11,12 @@ function RepoInfo({ repo }) {
         <p>{repo.description}</p>
       </Row>
       <Row>
-        <Col md={2}>Stars: {repo.stargazers_count}</Col>
-        <Col md={2}>Issues: {repo.open_issues_count}</Col>
+        <Col md={2} className="accent">
+          Stars: {repo.stargazers_count}
+        </Col>
+        <Col md={2} className="accent">
+          Issues: {repo.open_issues_count}
+        </Col>
         <Col>
           <p>
             {" "}

@@ -21,3 +21,17 @@
         cursor: pointer;
     }
 }
+
+.accent {
+    border: 1px solid $color-accent;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    transition: all .4s;
+
+    &:hover {
+        background: $color-accent
+    }
+}
