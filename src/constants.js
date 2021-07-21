@@ -13,9 +13,5 @@ function formatDate(d) {
 }
 formatDate(yesterday);
 console.log(newDate);
-export const API_ENDPOINT = `https://api.github.com/search/repositories?q=created:>${newDate}&order=desc`;
-export const API_REPOS = API_ENDPOINT + "&sort=stars";
-export const JSON_HEADERS = {
-  Accept: "application/json, text/plain, */*",
-  "Content-Type": "application/json",
-};
+export const API_ENDPOINT = `https://api.github.com/search/repositories?q=created:>${newDate}`;
+export const API_MOST_STARS = API_ENDPOINT + "&order=desc&sort=stars";

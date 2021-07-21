@@ -12,6 +12,7 @@ export function fetchRepos() {
   return (dispatch) => {
     return axios
       .get(API_ENDPOINT)
-      .then((res) => dispatch(setRepos(res.data.items)));
+      .then((res) => dispatch(setRepos(res.data.items)))
+      .catch((err) => console.error(err));
   };
 }
